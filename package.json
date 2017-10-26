@@ -31,6 +31,6 @@
     "url-loader": "^0.5.8",
     "webpack": "^3.5.5",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-hot-middleware": "^2.20.0"
+    "webpack-hot-middleware": "^2.19.1"
   }
 }

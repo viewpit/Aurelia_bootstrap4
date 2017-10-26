@@ -34,13 +34,20 @@ namespace au
         {
             app.UseResponseCompression();
 
-            if (env.IsDevelopment())
+            bool isDebug = false;
+#if DEBUG
+            isDebug = true;
+#endif
+
+
+            if (env.IsDevelopment() && isDebug)
             {
                 app.UseDeveloperExceptionPage();
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
                     HotModuleReplacement = true
                 });
+
             }
             else
             {
