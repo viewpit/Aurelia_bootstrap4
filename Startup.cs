@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -9,7 +5,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace au
+namespace Bootstrap4
 {
     public class Startup
     {
@@ -34,11 +30,10 @@ namespace au
         {
             app.UseResponseCompression();
 
-            bool isDebug = false;
-#if DEBUG
-            isDebug = true;
-#endif
-
+            bool isDebug = false;            
+            #if DEBUG
+                isDebug = true;
+            #endif
 
             if (env.IsDevelopment() && isDebug)
             {
@@ -47,13 +42,12 @@ namespace au
                 {
                     HotModuleReplacement = true
                 });
-
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>

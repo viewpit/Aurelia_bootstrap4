@@ -1,9 +1,90 @@
 <template>
-    <h1>Counter</h1>
 
-    <p>This is a simple example of an Aurelia component.</p>
+    <div class="card">
+        <h4 class="card-header">Counter</h4>
+        <div class="card-body">
+            <h4 class="card-title">Special title treatment</h4>
+            <p class="card-text">This is a simple example of an Aurelia component</p>
+            <p class="card-text2">
+                Current count: <strong>${currentCount}</strong>
+            </p>
+            <button click.delegate="incrementCounter()" class="btn btn-primary">Increment</button>
+        </div>
+    </div>
 
-    <p>Current count: <strong>${currentCount}</strong></p>
+    <!--
+    <a class="btn btn-default" aubs-btn-checkbox="state.bind: collapsed">Toggle Collapse</a>
 
-    <button click.delegate="incrementCounter()">Increment</button>
+    <hr>
+
+    <p aubs-collapse="collapsed.bind: collapsed">
+        Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+        master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+        keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+        salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+    </p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Position:</label>
+                <select class="form-control" value.bind="position">
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Trigger:</label>
+                <select class="form-control" value.bind="trigger">
+                    <option value="mouseover">Mouseover</option>
+                    <option value="focus">Focus</option>
+                    <option value="click">Click</option>
+                    <option value="outsideClick">Outside click</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            <button class="btn btn-default" aubs-popover="title:My Title <i class='fa fa-heart'></i>;
+                                                            body:<a href='#/popover'>Awesome</a> <strong>Content</strong>;
+                                                            position.bind: position;
+                                                            trigger.bind: trigger;
+                                                            on-toggle.call:toggled(open)">
+                Basic Popover
+            </button>
+
+            <br/> <br/>
+
+            <button class="btn btn-primary" aubs-popover="custom-popover.bind: customPopover;
+                                                            position.bind: position;
+                                                            trigger.bind: trigger;
+                                                            is-open.bind:isOpen;">
+                Custom Popover
+            </button>
+
+            <div ref="customPopover">
+                <h3 class="popover-title">
+                    Enter Password <i class="fa fa-lock"></i>
+                </h3>
+
+                <div class="popover-content">
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+
+                    <button class="btn btn-default" click.delegate="isOpen = false"> Unlock</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    -->
+
+
 </template>

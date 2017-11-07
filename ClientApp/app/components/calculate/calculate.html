@@ -1,0 +1,23 @@
+<template>
+    <require from="./blurOnEnter"></require>
+
+    <div>
+        <input placeholder="First name" label="First Name" value.bind="firstName & validate:rules" />
+        <input placeholder="Last name" label="Last Name" value.bind="lastName & validate:rules" />
+        <input placeholder="Email" label="Email" value.bind="email & validate:rules" />
+    </div>
+
+    <div style="margin-top: 15px;">
+        <button class="btn btn-secondary" click.delegate="validateModel()">Validate</button>
+    </div>
+
+    <h5>${message}</h5>
+
+    <ul style="margin-top: 15px;" show.bind="controller.errors.length">
+        <li repeat.for="error of controller.errors">
+            <a href="#" click.delegate="error.target.focus()">
+                ${error.message}
+            </a>
+        </li>
+    </ul>
+</template>

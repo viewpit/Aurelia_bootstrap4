@@ -1,0 +1,43 @@
+<template>
+    
+    <require from="./blurOnEnter"></require>
+    <div>
+        
+        <div class="form-group">
+            <label for="input-first-name">First name</label>
+            <input type="text" class="form-control" id="input-first-name" aria-describedby="firstNameHelp" placeholder="First name" value.bind="firstName & validate:rules">
+            <small id="firstNameHelp" class="form-text text-muted">Write your first name.</small>
+        </div>
+        <div class="form-group">
+            <label for="input-last-name">Last name</label>
+            <input type="text" class="form-control" id="input-last-name" aria-describedby="lastNameHelp" placeholder="Last name" value.bind="lastName & validate:rules">
+            <small id="lastNameHelp" class="form-text text-muted">Write your last name.</small>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" value.bind="Email & validate:rules">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="inputReq">Required without error text</label>
+            <input type="text" class="form-control" id="inputReq" placeholder="Required without error text" value.bind="noErrorText & validate:rules">            
+        </div><div class="form-group">
+            <label for="inputText">Put some text here</label>
+            <input type="text" class="form-control" id="inputText" placeholder="put some text here" value.bind="textareaValue & validate:rules">
+        </div>
+    </div>
+
+    <div style="margin-top: 15px;">
+        <button class="btn btn-default" click.delegate="validateModel()">validate</button>
+    </div>
+
+    <h5>${message}</h5>
+
+    <ul style="margin-top: 15px;" show.bind="controller.errors.length">
+        <li repeat.for="error of controller.errors">
+            <a href="#" click.delegate="error.target.focus()">
+                ${error.message}
+            </a>
+        </li>
+    </ul>
+</template>
