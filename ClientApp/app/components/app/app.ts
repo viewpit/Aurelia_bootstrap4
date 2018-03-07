@@ -5,7 +5,7 @@ import 'bootstrap';
 
 export class App {
     menuOpen = false;
-    router: Router;
+    router!: Router;
 
     configureRouter(config, router) {
         config.title = 'Bootstrap4';

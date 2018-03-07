@@ -61,4 +61,4 @@ When your dependencies have finished restoring, press Ctrl+F5 to launch the appl
 
 ### Third party documentation
 
-* Bootstrap 4.0.0-beta.2 (http://getbootstrap.com/)
+* Bootstrap 4.0.0 (http://getbootstrap.com/)

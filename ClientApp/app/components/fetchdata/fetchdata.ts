@@ -3,7 +3,7 @@ import { inject } from 'aurelia-framework';
 
 @inject(HttpClient)
 export class Fetchdata {
-    public forecasts: WeatherForecast[];
+    public forecasts!: WeatherForecast[];
 
     constructor(http: HttpClient) {
         http.fetch('api/SampleData/WeatherForecasts')
